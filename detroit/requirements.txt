@@ -1,0 +1,5 @@
+fastapi[standard]==0.138.0
+SQLAlchemy==2.0.51
+pydantic-settings==2.14.2
+pytest>=8.0,<10
+httpx>=0.27,<1

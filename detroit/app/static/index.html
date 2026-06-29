@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Detroit</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <h1>Project Detroit</h1>
+      <p class="muted">Decision-kernel playground</p>
+
+      <label>Agent ID</label>
+      <div class="row">
+        <input id="agentId" value="dev-agent">
+        <button id="createAgent">Create / Load</button>
+      </div>
+
+      <div id="chat" class="chat"></div>
+
+      <label>Message</label>
+      <textarea id="message" placeholder="Say something..."></textarea>
+
+      <div class="grid">
+        <label>Valence
+          <input id="valence" type="number" min="-1" max="1" step="0.1" value="0">
+        </label>
+        <label>Novelty
+          <input id="novelty" type="number" min="0" max="1" step="0.1" value="0.5">
+        </label>
+        <label>Importance
+          <input id="importance" type="number" min="0" max="1" step="0.1" value="0.5">
+        </label>
+        <label>Topic
+          <input id="topic" placeholder="optional">
+        </label>
+      </div>
+
+      <label class="checkbox">
+        <input id="unresolved" type="checkbox">
+        Leave this interaction unresolved
+      </label>
+
+      <div class="row">
+        <button id="send">Send</button>
+        <button id="tick">Simulate 60 minutes</button>
+        <button id="refresh">Refresh state</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Current state</h2>
+      <pre id="state">Create the agent first.</pre>
+      <h2>Last decision</h2>
+      <pre id="decision">No decision yet.</pre>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
